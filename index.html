@@ -2,173 +2,204 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Resume</title>
     <style>
+        /* Outer page background (outside the card) */
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
             color: #222;
             line-height: 1.6;
-            margin: 40px auto;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 0;
+            padding: 40px 0;
         }
-        .container {
-      background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
-      color: #222;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-         h1, h2 {
-      color: #0078D7;
-    }
-    img {
-      width: 350px;
-      border-radius: 10px;
-      display: block;
-      margin-bottom: 20px;
-    }
-    hr {
-      border: 0;
-      height: 2px;
-      background: linear-gradient(to right, #0078D7, #24a4f1);
-      border-radius: 2px;
-      margin: 25px 0;
-    }
-    ul {
-      margin-top: 5px;
-    }
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #555;
-    }
+
+        /* Main card */
+        .card {
+            background: linear-gradient(to bottom right, #b0c9e7, #ffffff);
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            /* keeps banner corners clean */
+        }
+
+        /* Full-width top banner */
+        .banner {
+            width: 100%;
+            height: 260px;
+            /* adjust as you like */
+            object-fit: cover;
+            /* nicely crops the GIF */
+            display: block;
+        }
+
+        /* Content padding lives here so banner can touch edges */
+        .content {
+            padding: 24px 40px;
+        }
+
+        h1,
+        h2 {
+            color: #000;
+            margin-top: 0.4rem;
+        }
+
+        /* Apply styles to images EXCEPT the banner */
+        img:not(.banner) {
+            width: 500px;
+            max-width: 100%;
+            border-radius: 12px;
+            display: block;
+            margin: 0 0 24px 0;
+        }
+
+        hr {
+            border: 0;
+            height: 2px;
+            background: linear-gradient(to right, #0078D7, #24a4f1);
+            border-radius: 2px;
+            margin: 25px 0;
+        }
+
+        ul {
+            margin-top: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 0.9em;
+            color: #eee;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
-    <h1>Hanz Medina</h1>
-    <img src="ME.gif" alt="Guy Vibe Coding" />
+    <div class="card">
+        <!-- Full-width banner at the very top -->
+        <img src="ME.gif" alt="Coding animation" class="banner" />
 
+        <!-- Everything else is padded inside .content -->
+        <div class="content">
+            <h1>Hanz Medina</h1>
+
+            <h2>Summary</h2>
+            <p>
+                DevOps Engineer at <strong>New York Life Insurance Company</strong>, skilled in automating CI/CD
+                pipelines,
+                integrating QA workflows, and improving deployment reliability. Experienced in
+                <strong>Jenkins, SonarQube, AWS, Mabl, Jira, Confluence, Docker</strong> with a strong foundation in
+                both
+                software development and infrastructure automation.
+            </p>
+            <p>
+                I’m passionate about building scalable solutions that bridge development and operations, from designing
+                backend
+                systems and APIs to managing cloud infrastructure and monitoring application performance. I also have
+                hands-on
+                experience with frontend technologies like <strong>React</strong> and <strong>JavaScript</strong>,
+                allowing me
+                to contribute to full-stack projects.
+            </p>
+
+            <hr />
+
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    Bachelor of Science in Computer Science Information Security – John Jay College of Criminal Justice
+                    (2022–2023)
+                    <ul>
+                        <li>Dean's List – Spring 2022 & Spring 2023</li>
+                        <li>Graduated with Latin Honors</li>
+                    </ul>
+                </li>
+                <li>
+                    Associate of Science in Computer Science Information Security – Queensborough Community College
+                    (2019–2021)
+                    <ul>
+                        <li>Dean's List – Winter 2019 through Winter 2021</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <hr />
+
+            <h2>Professional Experience</h2>
+
+            <p><strong>New York Life Insurance Company – New York, NY</strong><br />
+                <i>DevOps Engineer | January 2024 – Present</i>
+            </p>
+            <ul>
+                <li>Develop and maintain CI/CD pipelines in Jenkins for enterprise automation and cloud deployment
+                    workflows.</li>
+                <li>Integrated <strong>SonarQube</strong> for code quality and security scanning, improving code
+                    reliability across teams.</li>
+                <li>Collaborate on AWS-based infrastructure using EC2, RDS, and S3 to support application development
+                    and testing environments.</li>
+                <li>Manage and document Jira workflows, Confluence pages, and test automation (mabl) for team
+                    efficiency.</li>
+                <li>Support integration projects involving <strong>Monday.com</strong>, <strong>Apptio</strong>, and
+                    <strong>ServiceNow</strong> for workflow and data automation.</li>
+            </ul>
+
+            <p><strong>New York Department of Education – Center for Assistive Technology, Queens, NY</strong><br />
+                <i>CUNY Research Foundation Assistive Technology Intern | February 2023 – January 2024</i>
+            </p>
+            <ul>
+                <li>Installed assistive technology on DOE laptops and deployed apps on DOE tablets for students with
+                    disabilities.</li>
+                <li>Provided phone and email support to students and staff.</li>
+                <li>Maintained inventory systems and produced reports and queries.</li>
+                <li>Performed maintenance and equipment setup across multiple technologies.</li>
+            </ul>
+
+            <p><strong>New York Life – New York, NY</strong><br />
+                <i>Vulnerability Analyst Intern | June 2023 – August 2023</i>
+            </p>
+            <ul>
+                <li>Assisted in identifying and evaluating security vulnerabilities in software, systems, and
+                    applications.</li>
+                <li>Collaborated with security teams to analyze and prioritize vulnerabilities based on impact and risk.
+                </li>
+                <li>Authored vulnerability assessment reports with remediation recommendations.</li>
+            </ul>
+
+            <p><strong>P.S. 019 Marino Jeantet – Corona, NY</strong><br />
+                <i>CUNY Research Foundation Tech Intern | January 2022 – January 2023</i>
+            </p>
+            <ul>
+                <li>Troubleshot hardware and software issues and imaged devices for classrooms and offices.</li>
+                <li>Configured wireless devices for student use.</li>
+                <li>Coordinated with the Help Center to ensure timely repairs.</li>
+            </ul>
+
+            <p><strong>Athena Technology – Woodside, NY</strong><br />
+                <i>Certified Meter Technician | September 2018 – July 2019</i>
+            </p>
+            <ul>
+                <li>Imaged 500+ taxi monitors and trained 100+ drivers/staff on meter hardware operation.</li>
+                <li>Installed and wired tablets for drivers and passengers in taxis.</li>
+            </ul>
+
+            <hr />
+
+            <h2>Technical Skills</h2>
+            <p>
+                <b>DevOps & Cloud:</b> Jenkins, SonarQube, AWS (EC2, RDS, S3), Docker, GitHub Actions, Linux, SQL
+                Server, Oracle DB, Maven, HCL Launch<br />
+                <b>Programming:</b> Python, Java, C++, JavaScript (React, Node.js, Express), SQL<br />
+                <b>Automation & Tools:</b> mabl, Terraform (beginner), Jira, Confluence, ServiceNow, Monday.com<br />
+                <b>Other:</b> CI/CD, API Integration, Cloud Security, Infrastructure as Code, Agile/Scrum
+            </p>
+        </div>
     </div>
-    <h2>Summary</h2>
-<p>
-    DevOps Engineer at <strong>New York Life Insurance Company</strong>, skilled in automating CI/CD pipelines,
-    integrating QA workflows, and improving deployment reliability. Experienced in <strong>Jenkins, SonarQube, AWS, Mabl, Jira, Confluence and
-    Docker</strong> with a strong foundation in both software development and infrastructure automation.
-</p>
-<p>
-    I’m passionate about building scalable solutions that bridge development and operations, from designing backend
-    systems and APIs to managing cloud infrastructure and monitoring application performance. I also have hands-on
-    experience with frontend technologies like <strong>React</strong> and <strong>JavaScript</strong>, allowing me to
-    contribute to full-stack projects.
-</p>
-    <hr />
 
-    <h2>Education</h2>
-    <ul>
-        <li>Bachelor of Science in Computer Science Information Security - John Jay College of Criminal Justice (2022 -
-            2023)</li>
-        <ul>
-            <li>Dean's list - Spring 2022 - Spring 2023</li>
-            <li>Graduated with Latin Honors</li>
-        </ul>
-
-        <li>Associates of Science in Computer Science Information Security - QueensBorough Community College (2019 -
-            2021)</li>
-        <ul>
-            <li>Dean's List - Winter 2019 - Winter 2021</li>
-        </ul>
-    </ul>
-    <hr />
-    <h2>Professional Experience</h2>
-
-    <ul>
-        <p><strong>New York Life Insurance Company - New York, NY</strong></p><br />
-        <i>DevOps Engineer | January 2024 – Present</i></p>
-        <ul>
-            <li>Develop and maintain CI/CD pipelines in Jenkins for enterprise automation and cloud deployment
-                workflows.</li>
-            <li>Integrated <strong>SonarQube</strong> for code quality and security scanning, improving code reliability
-                across
-                teams.</li>
-            <li>Collaborate on AWS-based infrastructure using EC2, RDS, and S3 to support application development and
-                testing
-                environments.</li>
-            <li>Manage and document Jira workflows, Confluence pages, and test automation (mabl) for team efficiency.
-            </li>
-            <li>Support integration projects involving <strong>Monday.com</strong>, <strong>Apptio</strong>, and
-                <strong>ServiceNow</strong> for workflow and data automation.
-            </li>
-        </ul>
-        <p>New York Department of Education Center for Assistive Technology, Queens, NY<br />
-            <i>CUNY Research Foundation Assistive Technology Intern February 2023 - January 2024</i>
-        </p>
-        <ul>
-            <li>Installing assistive technology on DOE laptops, deploying apps on DOE tablets for students with
-                disabilities.</li>
-            <li>Providing students and the staff at their school with technology assistance over the phone and email.
-            </li>
-            <li>Maintaining inventory systems along with producing reports and queries.</il>
-            <li>Performing maintenance and equipment setup in multiple technologies.</li>
-        </ul>
-        <br />
-
-        <p><strong>New York Life, New York, NY</strong><br />
-            <i>Vulnerability Analyst Intern June 2023 - August 2023</i>
-        </p>
-        <ul>
-            <li>Assisting in identifying & evaluating potential security vulnerabilities in software, systems, &
-                applications.</li>
-            <li>Collaborating with the security team to analyze & prioritize vulnerabilities based on potential impact &
-                risk.</li>
-            <li>Assisting in creating detailed vulnerability assessment reports, including findings, recommendations &
-                potential mitigations.</il>
-            <li>Gained hands-on experience with various vulnerability assessment tools & security technologies.</li>
-        </ul>
-        <br />
-
-        <p><strong>P.S. 019 Marino Jeantet Corona, NY</strong><br />
-            <i>CUNY Research Foundation Tech Intern January 2022 - January 2023</i>
-        </p>
-        <ul>
-            <li>Troubleshot hardware and software problems, along with setting up computers in classrooms and offices.
-            </li>
-            <li>Configured wireless devices for children's daily use.</li>
-            <li>Monitored equipment and worked with Help Center to ensure timely repair.</il>
-            <li>Aided staff in the use of technology equipment.</li>
-        </ul>
-        <br />
-
-        <p><strong>Athena Technology Woodside, NY</strong><br />
-            <i>Certified Meter Technician September 2018- July 2019</i>
-        </p>
-        <ul>
-            <li>Designed and implemented a process for imaging a fleet of (500+) taxi monitors.</li>
-            <li>Installed and wired tablets for both front-side driver and backside passenger in taxi cars.</li>
-            <li>Assisted in training (100+) taxi drivers and management with tablet-based meters.</li>
-        </ul>
-        </li>
-        <hr />
-        <h2>Technical Skills</h2>
-        <p>
-            <b>DevOps & Cloud:</b> Jenkins, SonarQube, AWS (EC2, RDS, S3), Docker, GitHub Actions, Linux, SQL Server,
-            Oracle DB,
-            Maven, HCL Launch<br />
-            <b>Programming:</b> Python, Java, C++, JavaScript (React, Node.js, Express), SQL<br />
-            <b>Automation & Tools:</b> mabl, Terraform (beginner), Jira, Confluence, ServiceNow, Monday.com<br />
-            <b>Other:</b> CI/CD, API Integration, Cloud Security, Infrastructure as Code, Agile/Scrum
-        </p>
+    <footer>Copyright © 2024 Hon & Hanz INC. All Rights Reserved.</footer>
 </body>
-<footer>Copyright © 2024 Hon & Hanz INC. All Rights Reserved.
-</footer>
 
 </html>
